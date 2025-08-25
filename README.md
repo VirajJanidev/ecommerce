@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ecommercedata
 
 A new Flutter project.
@@ -9,6 +10,7 @@ A demo Flutter project with **GetX state management** and an **attractive bottom
 ---
 
 ## 📦 Packages Used
+
 - **get** → State management & navigation
 - **convex_bottom_bar** → Modern curved bottom navigation bar with bubble effect
 - **dio** → API calls
@@ -36,3 +38,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# ecommerce
+A demo Flutter project with **GetX state management** and an **attractive bottom navigation bar**
+>>>>>>> 734778c1637897e8b9f5daa5fbb37c3a475e6a58

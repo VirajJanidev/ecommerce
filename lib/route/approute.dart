@@ -12,7 +12,7 @@ class AppRoute{
   static String bottomNavScreen="/bottomNavScreen";
 
   static List<GetPage> screens=[
-    GetPage(name: splash, page: () => SplasScreen(),),
+    GetPage(name: splash, page: () => SplashScreen(),),
     GetPage(name: home, page: () => HomeScreen(),),
     GetPage(name: home, page: () => HomeScreen(),),
     GetPage(name: bottomNavScreen, page: () => BottomNavScreen(),),

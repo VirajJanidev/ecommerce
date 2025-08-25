@@ -31,6 +31,26 @@ class HomeController extends GetxController {
       products.assignAll(data);
     } catch (e) {
       error.value = 'Failed to load products';
+      products.assignAll([
+        Products(
+          id: 1,
+          title: 'Mock Shirt',
+          price: 20.0,
+          description: 'Offline Shirt',
+          image: '',
+          category: 'clothes',
+          rating: Rating(rate: 4.8, count: 50),
+        ),
+        Products(
+          id: 2,
+          title: 'Mock Laptop',
+          price: 999.0,
+          description: 'Offline Laptop',
+          image: '',
+          category: 'electronics',
+          rating: Rating(rate: 4.8, count: 50),
+        ),
+      ]);
     } finally {
       isLoading.value = false;
     }

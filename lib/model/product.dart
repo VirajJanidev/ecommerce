@@ -3,15 +3,13 @@ import 'dart:convert';
 List<Products> productsFromJson(String str) =>
     List<Products>.from(json.decode(str).map((x) => Products.fromJson(x)));
 
-String productsToJson(List<Products> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Products {
   int id;
   String title;
   double price;
   String description;
-  Category category;
+  final String category;
   String image;
   Rating rating;
 
@@ -30,20 +28,11 @@ class Products {
     title: json["title"],
     price: json["price"]?.toDouble(),
     description: json["description"],
-    category: categoryValues.map[json["category"]]!,
+    category: json['category'] ?? '',
     image: json["image"],
     rating: Rating.fromJson(json["rating"]),
   );
 
-  Map<String, dynamic> toJson() => {
-    "id": id,
-    "title": title,
-    "price": price,
-    "description": description,
-    "category": categoryValues.reverse[category],
-    "image": image,
-    "rating": rating.toJson(),
-  };
 }
 
 enum Category { ELECTRONICS, JEWELERY, MEN_S_CLOTHING, WOMEN_S_CLOTHING }
